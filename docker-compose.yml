@@ -1,0 +1,32 @@
+# 🌐 Network Config (เชื่อมกับวง Web เพื่อให้ UI คุยข้ามไป Service ต่างๆ ได้)
+networks:
+  dynamicdev-net:
+    external: true
+
+services:
+  # 🎨 UI Mid Controller — Webhook Trigger Panel (Streamlit / Pure Python)
+  ui-mid-controller:
+    build: .
+    image: ui-mid-controller:latest
+    container_name: ui-mid-controller
+    restart: always
+    ports:
+      # Internal port 8502 (ไม่ซ้ำกับ agent-ui ที่ใช้ 8501)
+      - "8502:8502"
+    environment:
+      # ─── Webhook URLs ───────────────────────────────────────────────────────
+      # กำหนด Webhook URL ที่นี่ (ลบค่าตัวอย่างเดิมออก → ใส่ของจริงเอง)
+      # WEBHOOK_URL=https://n8n.yourdomain.com/webhook/your-endpoint
+      # CHAT_WEBHOOK=https://n8n.yourdomain.com/webhook/chat
+      # MONITOR_WEBHOOK=https://n8n.yourdomain.com/webhook/status-check
+      # ────────────────────────────────────────────────────────────────────────
+      - PYTHONUNBUFFERED=1
+    volumes:
+      # Hot-reload: แก้โค้ดในโฟลเดอร์นี้แล้วเห็นผลทันที
+      - .:/app
+    networks:
+      - dynamicdev-net
+    deploy:
+      resources:
+        limits:
+          memory: 512M
