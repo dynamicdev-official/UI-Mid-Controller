@@ -6,8 +6,8 @@
 
 
 <div align="center">
-
-![UI-Mid-Controller Logo](ui-mid-controller-logo.jpeg)
+  
+<img src="ui-mid-controller-logo.jpeg" alt="UI-Mid-Controller Logo" width="200px">
 
 **🐍 100% Pure Python Web Application**  
 *Control webhooks with a cyberpunk-styled interface — No JavaScript, No Build Tools, No Complexity*
