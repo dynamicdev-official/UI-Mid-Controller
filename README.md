@@ -4,10 +4,9 @@
 
 </div>
 
-
 <div align="center">
   
-<img src="ui-mid-controller-logo.jpeg" alt="UI-Mid-Controller Logo" width="200px">
+<img src="assets/images/ui-mid-controller-logo.jpeg" alt="UI-Mid-Controller Logo" width="200px">
 
 **🐍 100% Pure Python Web Application**  
 *Control webhooks with a cyberpunk-styled interface — No JavaScript, No Build Tools, No Complexity*
@@ -76,6 +75,33 @@ streamlit run app.py
 </td>
 </tr>
 </table>
+
+---
+
+## 📸 Screenshots
+
+### Dashboard Monitor
+![Dashboard Screenshot](assets/images/dashboard-UI-Mid-Controller.png)
+
+*Real-time monitoring interface with webhook status, automation flows, and system metrics*
+
+### AI Chat Interface
+![Chat Interface](assets/images/Chat-UI-Mid-Controller.png)
+
+*Intuitive chat panel for sending messages, uploading files, and receiving AI responses*
+
+### Processed Results Display
+![Processed Results](assets/images/processed-UI-Mid-Controller.png)
+
+*Beautiful display of automation results with real-time updates and response formatting*
+
+---
+
+## 🎥 Demo Video
+
+[![Watch Demo Video](assets/images/dashboard-UI-Mid-Controller.png)](assets/videos/demo-UI-Mid-Controller.mp4)
+
+**[Full Demo Video](assets/videos/demo-UI-Mid-Controller.mp4)** - See the entire workflow in action (1 minute walkthrough)
 
 ---
 
@@ -219,8 +245,21 @@ ui-mid-controller/
 ├── Dockerfile             # Image build definition
 ├── .env.example           # Environment template
 ├── requirements.txt       # Python dependencies
-├── ui-mid-controller-logo.jpeg
-└── README.md
+├── README.md
+├── LICENSE.md
+│
+├── assets/
+│   ├── images/
+│   │   ├── ui-mid-controller-logo.jpeg
+│   │   ├── dashboard-UI-Mid-Controller.png
+│   │   ├── Chat-UI-Mid-Controller.png
+│   │   └── processed-UI-Mid-Controller.png
+│   │
+│   └── videos/
+│       └── demo-UI-Mid-Controller.mp4
+│
+└── docs/
+    └── (future documentation)
 ```
 
 ---
@@ -286,9 +325,9 @@ Add new functionality in pure Python:
 import streamlit as st
 import requests
 
-if st.button("🚀 Launch"):
+if st.button("Launch"):
     response = requests.post(WEBHOOK_URL, json={"action": "launch"})
-    st.success(f"✅ {response.json()}")
+    st.success(f"Response: {response.json()}")
 ```
 
 No JSX. No TypeScript. No build step. Just Python.
@@ -297,16 +336,16 @@ No JSX. No TypeScript. No build step. Just Python.
 
 ## 🎯 Use Cases
 
-### 🤖 AI Agent Controller
+### AI Agent Controller
 UI → Send message → n8n → LLM → Display response
 
-### 📊 Automation Dashboard
+### Automation Dashboard
 UI → Monitor button → Check status → Show metrics
 
-### 🔄 File Processing
+### File Processing
 UI → Upload file → n8n process → Return results
 
-### 💬 ChatBot Interface
+### ChatBot Interface
 UI → Message + file → Backend → Chat history
 
 ---
@@ -361,14 +400,14 @@ Perfect for n8n, Make, Zapier integrations.
 ║  support@dynamicdev.asia                      ║
 ║  james.dynamicdev@gmail.com                   ║
 ║                                               ║
-║  Made with in Bangkok, Thailand               ║
+║  Made with love in Bangkok, Thailand          ║
 ╚═══════════════════════════════════════════════╝
 ```
 
 **Powered by:**
 - [Streamlit](https://streamlit.io) — Python web UI
 - [n8n](https://n8n.io) — Workflow automation
-- [Python](https://python.org) — Best language 🐍
+- [Python](https://python.org) — Best language
 
 </div>
 
@@ -384,7 +423,7 @@ Perfect for n8n, Make, Zapier integrations.
 
 <br>
 
-**Made with 🐍 Python | Deployed with 🐳 Docker | Powered by ⚡ Automation**
+**Made with Python | Deployed with Docker | Powered by Automation**
 
 <img src="https://img.shields.io/badge/v1.0-Release-4CAF50?style=for-the-badge" />
 <img src="https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white" />
